@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: crm-web-app
+  datasource:
+    url: jdbc:postgresql://localhost:5432/shop
+    username: username
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+#      ddl-auto: none
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 100
+          batch_versioned_data: true
+        order_inserts: true
+        order_updates: true
+    show-sql: true
+  thymeleaf:
+    prefix: file:src/main/resources/templates/
+#app:
+#  security:
+#    type: inMemory
+#liquibase:
+#  enabled: true
+#  default-schema: shop_schema
+
+server:
+  port: 8764
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
