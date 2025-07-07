@@ -1,19 +1,45 @@
 package crm.service.settings;
 
-import crm.dto.settings.request.UserSettingsUpsertRequest;
+import crm.request.settings.UserSettingsUpsertRequest;
+import java.util.List;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
+/**
+ * Interface user settings determine methods required.
+ * todo дополнить
+ *
+ * @see UserSettingsUpsertRequest
+ * @param <UserSettingsDtoT> {@link crm.request.settings.UserSettingsDto}
+ */
 @Service
-public interface UserSettingsService<UserSettingsDto> {
+public interface UserSettingsService<UserSettingsDtoT> {
 
-    List<UserSettingsDto> findAll();
+  /**
+  * Find dto list {@link crm.request.settings.UserSettingsDto}.
+  *
+  * @return dto list
+  */
+  List<UserSettingsDtoT> findAll();
 
-    UserSettingsDto findById(Long id);
+  /**
+  * Find dto {@link crm.request.settings.UserSettingsDto} by id .
+  *
+  * @return dto instance {@link crm.request.settings.UserSettingsDto}
+  */
+  UserSettingsDtoT findById(Long id);
 
-    UserSettingsDto save(UserSettingsUpsertRequest request);
+  /**
+  * Save request {@link UserSettingsUpsertRequest}.
+  *
+  * @return saved dto {@link crm.request.settings.UserSettingsDto}
+  */
+  UserSettingsDtoT save(UserSettingsUpsertRequest request);
 
-    UserSettingsDto updateById(Long id, UserSettingsUpsertRequest request);
+  /**
+  * Update request {@link UserSettingsUpsertRequest}.
+  *
+  * @return updatable dto {@link crm.request.settings.UserSettingsDto}
+  */
+  UserSettingsDtoT updateById(Long id, UserSettingsUpsertRequest request);
 
 }

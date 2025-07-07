@@ -8,10 +8,10 @@
 //@Entity
 //@Table(name = "receipt_settings")
 //public class ReceiptSettings {
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long id;
-//    private User user;
-//    @ManyToMany
-//    private List<ReceiptField> displayedFields;
+//  @Id
+//  @GeneratedValue(strategy = GenerationType.IDENTITY)
+//  private Long id;
+//  private User user;
+//  @ManyToMany
+//  private List<ReceiptField> displayedFields;
 //}

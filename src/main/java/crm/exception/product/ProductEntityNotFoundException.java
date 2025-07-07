@@ -2,9 +2,17 @@ package crm.exception.product;
 
 import jakarta.persistence.EntityNotFoundException;
 
+/**
+* Exception occurs if {@link crm.model.product.Product} not found.
+*/
 public class ProductEntityNotFoundException extends EntityNotFoundException {
-    public ProductEntityNotFoundException(String message) {
-        super(message);
-    }
+  /**
+  * Error message.
+  *
+  * @param message text error message.
+  */
+  public ProductEntityNotFoundException(String message) {
+    super(message);
+  }
 
 }

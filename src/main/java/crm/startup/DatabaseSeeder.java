@@ -1,5 +1,14 @@
 package crm.startup;
 
+import org.springframework.stereotype.Component;
+
+/**
+ * Interface performs data initialize.
+ */
+@Component
 public interface DatabaseSeeder {
-    void initialize();
+  /**
+   * Method initialize.
+   */
+  void initialize();
 }

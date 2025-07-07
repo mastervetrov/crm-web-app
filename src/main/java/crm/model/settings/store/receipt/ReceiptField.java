@@ -7,11 +7,11 @@
 //@Entity
 //@Table(name = "receipt_field")
 //public class ReceiptField {
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long id;
-//    private String name;
-//    private boolean mustBeDisplayed;
-//    private List<ReceiptSettings> receiptSettings;
+//  @Id
+//  @GeneratedValue(strategy = GenerationType.IDENTITY)
+//  private Long id;
+//  private String name;
+//  private boolean mustBeDisplayed;
+//  private List<ReceiptSettings> receiptSettings;
 //
 //}

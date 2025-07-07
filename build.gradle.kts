@@ -1,65 +1,73 @@
 plugins {
-	java
-	id("org.springframework.boot") version "3.4.3"
-	id("io.spring.dependency-management") version "1.1.7"
+  java
+  id("org.springframework.boot") version "3.4.3"
+  id("io.spring.dependency-management") version "1.1.7"
+  id("checkstyle")
 }
 
-group = "like-online-store"
+group = "crm"
 version = "0.0.1-SNAPSHOT"
 
 java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
-	}
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(17)
+  }
+}
+
+checkstyle {
+  toolVersion = "10.26.1"
+  configFile = file("config/checkstyle/checkstyle.xml") // Путь к файлу конфигурации
 }
 
 configurations {
-	compileOnly {
-		extendsFrom(configurations.annotationProcessor.get())
-	}
+  compileOnly {
+    extendsFrom(configurations.annotationProcessor.get())
+  }
 }
 
 repositories {
-	mavenCentral()
+  mavenCentral()
 }
 
 extra["springCloudVersion"] = "2024.0.0"
 
 dependencies {
-	compileOnly("org.projectlombok:lombok")
-	annotationProcessor("org.projectlombok:lombok")
+  compileOnly("org.projectlombok:lombok")
+  annotationProcessor("org.projectlombok:lombok")
 
-	implementation("org.mapstruct:mapstruct:1.5.5.Final")
-	annotationProcessor("org.mapstruct:mapstruct-processor:1.5.5.Final")
-
-
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("org.springframework.boot:spring-boot-starter")
+  implementation("org.mapstruct:mapstruct:1.5.5.Final")
+  annotationProcessor("org.mapstruct:mapstruct-processor:1.5.5.Final")
 
 
-	runtimeOnly("org.postgresql:postgresql")
+  implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+  implementation("org.springframework.boot:spring-boot-starter")
+
+
+  runtimeOnly("org.postgresql:postgresql")
 
 // https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui
-	implementation("org.springdoc:springdoc-openapi-ui:1.6.14")
+  implementation("org.springdoc:springdoc-openapi-ui:1.6.14")
 
-	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
-	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
-	implementation("org.springframework.kafka:spring-kafka")
+  implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+  implementation("org.springframework.boot:spring-boot-starter-web")
+  implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+  implementation("org.springframework.kafka:spring-kafka")
 
-//	testImplementation("org.springframework.boot:spring-boot-starter-test")
-//	testImplementation("org.springframework.kafka:spring-kafka-test")
-	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+// https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-checkstyle-plugin
 
-	developmentOnly("org.springframework.boot:spring-boot-devtools")
+//  testImplementation("org.springframework.boot:spring-boot-starter-test")
+//  testImplementation("org.springframework.kafka:spring-kafka-test")
+  testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+  developmentOnly("org.springframework.boot:spring-boot-devtools")
 }
 
 dependencyManagement {
-	imports {
-		mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
-	}
+  imports {
+    mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
+  }
 }
 
 tasks.withType<Test> {
-	useJUnitPlatform()
+  useJUnitPlatform()
 }
