@@ -1,6 +1,5 @@
 package crm.repository.product;
 
-import crm.service.product.ProductSvc;
 import java.util.List;
 import java.util.Map;
 import org.springframework.data.domain.Page;
@@ -18,7 +17,7 @@ import org.springframework.stereotype.Repository;
  * @see ProductRepositoryCustomImpl
  * @see crm.controller.thymeleaf.html.store.remainder.RemainderController
  * @see crm.controller.thymeleaf.ajax.store.remainder.RemainderAjaxController
- * @see ProductSvc
+ * @see Productservice
  * @see crm.model.product.Product
  */
 @Repository

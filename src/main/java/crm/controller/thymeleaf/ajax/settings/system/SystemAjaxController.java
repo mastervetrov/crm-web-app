@@ -22,7 +22,7 @@ public class SystemAjaxController extends BaseAjaxController {
   */
   @GetMapping("/prices")
   private String loadSettingsPrices() {
-    return getDivByClassName("prices", "settingsSystemPricesContent");
+    return getDivByIdName("prices", "settingsSystemPricesContent");
   }
 
   /**
@@ -32,7 +32,7 @@ public class SystemAjaxController extends BaseAjaxController {
   */
   @GetMapping("/statuses/statuses")
   private String loadSettingsStatuses() {
-    return getDivByClassName("statuses/statuses", "settingsSystemStatusesStatusesContent");
+    return getDivByIdName("statuses/statuses", "settingsSystemStatusesStatusesContent");
   }
 
   /**
@@ -42,7 +42,7 @@ public class SystemAjaxController extends BaseAjaxController {
   */
   @GetMapping("/form-editor")
   private String loadSettingsFormEditor() {
-    return getDivByClassName("form-editor", "settingsSystemFormEditorContent");
+    return getDivByIdName("form-editor", "settingsSystemFormEditorContent");
   }
 
   /**
@@ -52,6 +52,6 @@ public class SystemAjaxController extends BaseAjaxController {
   */
   @GetMapping("/template-editor")
   private String loadSettingsTemplateEditor() {
-    return getDivByClassName("template-editor", "settingsSystemTemplateEditorContent");
+    return getDivByIdName("template-editor", "settingsSystemTemplateEditorContent");
   }
 }

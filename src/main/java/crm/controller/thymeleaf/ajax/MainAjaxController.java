@@ -30,6 +30,6 @@ public class MainAjaxController extends BaseAjaxController {
 
   @GetMapping("/settings")
   private String loadSettings() {
-    return getDivByClassName("settings", "panelContent");
+    return getDivByIdName("settings", "panelContent");
   }
 }

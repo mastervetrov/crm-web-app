@@ -24,7 +24,7 @@ public class CommunicationAjaxController extends BaseAjaxController {
   */
   @GetMapping("/notifications/employees")
   private String showSettingsNotificationsEmployees() {
-    return getDivByClassName("notifications/employees", "settingsNotificationsEmployeesContent");
+    return getDivByIdName("notifications/employees", "settingsNotificationsEmployeesContent");
   }
 
   /**
@@ -34,7 +34,7 @@ public class CommunicationAjaxController extends BaseAjaxController {
   */
   @GetMapping("/notifications/clients")
   private String showSettingsNotificationsClients() {
-    return getDivByClassName("notifications/clients", "settingsNotificationsClientsContent");
+    return getDivByIdName("notifications/clients", "settingsNotificationsClientsContent");
   }
 
   /**
@@ -44,7 +44,7 @@ public class CommunicationAjaxController extends BaseAjaxController {
   */
   @GetMapping("/notifications/domain")
   private String showSettingsNotificationsDomain() {
-    return getDivByClassName("notifications/domain", "settingsNotificationsDomainContent");
+    return getDivByIdName("notifications/domain", "settingsNotificationsDomainContent");
   }
 
   /**
@@ -54,7 +54,7 @@ public class CommunicationAjaxController extends BaseAjaxController {
   */
   @GetMapping("/sms")
   private String showSettingsSms() {
-    return getDivByClassName("sms", "settingsNotificationsSmsContent");
+    return getDivByIdName("sms", "settingsNotificationsSmsContent");
   }
 
   /**
@@ -64,7 +64,7 @@ public class CommunicationAjaxController extends BaseAjaxController {
   */
   @GetMapping("/telephony")
   private String showSettingsTelephony() {
-    return getDivByClassName("telephony", "settingsNotificationsTelephonyContent");
+    return getDivByIdName("telephony", "settingsNotificationsTelephonyContent");
   }
 
 }

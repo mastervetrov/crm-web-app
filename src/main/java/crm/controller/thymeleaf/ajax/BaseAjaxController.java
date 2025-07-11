@@ -65,4 +65,15 @@ public abstract class BaseAjaxController {
   public String getDivByClassName(String pathHtml, String className) {
     return getBaseUrl() + pathHtml + " :: div." +  className;
   }
+
+  /**
+   * Creating template for receiving html fragments by div#idName.
+   *
+   * @param pathHtml path to html file
+   * @param idName id name div
+   * @return template thymeleaf
+   */
+  public String getDivByIdName(String pathHtml, String idName) {
+    return getBaseUrl() + pathHtml + " :: div#" + idName;
+  }
 }

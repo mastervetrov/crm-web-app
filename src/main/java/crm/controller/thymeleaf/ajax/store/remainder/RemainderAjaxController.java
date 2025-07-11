@@ -25,6 +25,7 @@ public class RemainderAjaxController extends BaseAjaxController {
   */
   @GetMapping("")
   private String loadStoreRemainder(Model model) {
+
     return getDivByClassName("remainder", "store-remainder-panel");
   }
 }

@@ -3,7 +3,7 @@ package crm.controller.thymeleaf.html.store.remainder;
 import crm.controller.thymeleaf.html.BaseHtmlController;
 import crm.controller.thymeleaf.html.BaseUrl;
 import crm.dto.product.ProductDto;
-import crm.service.product.ProductSvc;
+import crm.service.product.ProductService;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Slf4j
 public class RemainderController extends BaseHtmlController {
 
-  private final ProductSvc productService;
+  private final ProductService productService;
 
   /**
   * Method of rendering hmtl page via thymeleaf.
@@ -34,6 +34,7 @@ public class RemainderController extends BaseHtmlController {
   */
   @GetMapping("")
   private String showStoreRemainder(Model model) {
+
     List<String> fieldsSettings = List.of("id",
             "name",
             "description",
@@ -43,7 +44,7 @@ public class RemainderController extends BaseHtmlController {
 
     log.info("Поступил запрос от клиента, его настройки: {}", fieldsSettings.toString());
 
-    Page<ProductDto> productsResponsesPage = productService.findAll(0, 20);
+    Page<ProductDto> productsResponsesPage = productService.findAllByFields(fieldsSettings, 0, 20);
     List<ProductDto> productDtoList = productsResponsesPage.getContent();
     log.info("Проверка перед выводом в Template: " + productDtoList.toString());
     model.addAttribute("products", productDtoList);
@@ -53,7 +54,7 @@ public class RemainderController extends BaseHtmlController {
   }
 
   /**
-  * Method of rendering hmtl page via thymeleaf.
+  * Method of rendering html page via thymeleaf.
   *
   * @return "remainder/new.html"
   */

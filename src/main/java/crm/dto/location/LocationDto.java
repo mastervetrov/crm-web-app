@@ -1,13 +1,12 @@
 package crm.dto.location;
 
-import crm.service.location.LocationSvc;
 import lombok.Data;
 
 /**
  * Response Dto - contains location data.
  * Used for return to the controller
  *
- * @see LocationSvc
+ * @see Locationservice
  *
  */
 @Data

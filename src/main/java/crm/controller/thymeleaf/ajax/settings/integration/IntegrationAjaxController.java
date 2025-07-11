@@ -22,7 +22,7 @@ public class IntegrationAjaxController extends BaseAjaxController {
   */
   @GetMapping("/api")
   private String showSettingsApi() {
-    return getDivByClassName("api", "settingsIntegrationApiContent");
+    return getDivByIdName("api", "settingsIntegrationApiContent");
   }
 
   /**
@@ -32,7 +32,7 @@ public class IntegrationAjaxController extends BaseAjaxController {
   */
   @GetMapping("/webhook")
   private String showSettingsWebhook() {
-    return getDivByClassName("webhook", "settingsIntegrationWebhookContent");
+    return getDivByIdName("webhook", "settingsIntegrationWebhookContent");
   }
 
   /**
@@ -42,7 +42,7 @@ public class IntegrationAjaxController extends BaseAjaxController {
   */
   @GetMapping("/widget")
   private String showSettingsWidget() {
-    return getDivByClassName("widget", "settingsIntegrationWidgetContent");
+    return getDivByIdName("widget", "settingsIntegrationWidgetContent");
   }
 
 }

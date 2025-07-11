@@ -1,6 +1,6 @@
 package crm.model.user;
 
-import crm.model.settings.UserSettings;
+import crm.model.settingsuser.UserSettings;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

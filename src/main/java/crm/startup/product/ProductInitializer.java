@@ -1,8 +1,8 @@
 package crm.startup.product;
 
 import crm.model.product.Product;
-import crm.request.product.ProductUpsertRequest;
-import crm.service.product.ProductSvc;
+import crm.request.product.ProductRequest;
+import crm.service.product.ProductService;
 import crm.startup.DatabaseSeeder;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -16,9 +16,9 @@ import org.springframework.stereotype.Component;
  * Product Entity initializer.
  *
  * @see crm.repository.product.ProductRepository
- * @see ProductSvc
+ * @see ProductService
  * @see Product
- * @see ProductUpsertRequest
+ * @see ProductRequest
  * @see crm.dto.product.ProductDto
  */
 @Component
@@ -27,7 +27,7 @@ import org.springframework.stereotype.Component;
 public class ProductInitializer implements DatabaseSeeder {
 
   private final Random random = new Random();
-  private final ProductSvc productService;
+  private final ProductService productService;
 
   /**
    * Method initialize.
@@ -36,7 +36,7 @@ public class ProductInitializer implements DatabaseSeeder {
     List<Product> productsList = new ArrayList<>();
 
     for (int i = 1; i <= 20; i++) {
-      ProductUpsertRequest productUpsertRequest = new ProductUpsertRequest();
+      ProductRequest productUpsertRequest = new ProductRequest();
       productUpsertRequest.setName("Запчасть " + i);
       productUpsertRequest.setCount(i);
       productUpsertRequest.setHit(random.nextBoolean());

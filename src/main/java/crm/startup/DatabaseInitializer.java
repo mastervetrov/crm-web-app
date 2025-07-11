@@ -1,7 +1,7 @@
 package crm.startup;
 
 import crm.startup.product.ProductInitializer;
-import crm.startup.settings.SettingsInitializer;
+import crm.startup.settingsuser.SettingsInitializer;
 import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;

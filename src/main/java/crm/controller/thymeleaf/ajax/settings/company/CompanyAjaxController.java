@@ -22,7 +22,7 @@ public class CompanyAjaxController extends BaseAjaxController {
   */
   @GetMapping("/general/company")
   private String loadSettingsCompany() {
-    return getDivByClassName("general/company", "settingsGeneralCompanyContent");
+    return getDivByIdName("general/company", "settingsGeneralCompanyContent");
   }
 
   /**
@@ -32,7 +32,7 @@ public class CompanyAjaxController extends BaseAjaxController {
   */
   @GetMapping("/general/director")
   private String loadSettingsDirector() {
-    return getDivByClassName("general/director", "settingsGeneralDirectorContent");
+    return getDivByIdName("general/director", "settingsGeneralDirectorContent");
   }
 
   /**
@@ -42,7 +42,7 @@ public class CompanyAjaxController extends BaseAjaxController {
   */
   @GetMapping("/general/details")
   private String loadSettingsDetails() {
-    return getDivByClassName("general/details", "settingsGeneralDetailsContent");
+    return getDivByIdName("general/details", "settingsGeneralDetailsContent");
   }
 
   /**
@@ -52,7 +52,7 @@ public class CompanyAjaxController extends BaseAjaxController {
   */
   @GetMapping("/general/custom")
   private String loadSettingsCustom() {
-    return getDivByClassName("general/custom", "settingsGeneralCustomContent");
+    return getDivByIdName("general/custom", "settingsGeneralCustomContent");
   }
 
   /**
@@ -62,7 +62,7 @@ public class CompanyAjaxController extends BaseAjaxController {
   */
   @GetMapping("/locations")
   private String loadSettingsLocations() {
-    return getDivByClassName("locations", "settingsCompanyLocationsContent");
+    return getDivByIdName("locations", "settingsCompanyLocationsContent");
   }
 
   /**
@@ -72,7 +72,7 @@ public class CompanyAjaxController extends BaseAjaxController {
   */
   @GetMapping("/employees/employees")
   private String showSettingsEmployees() {
-    return getDivByClassName("employees/employees", "settingsEmployeesEmployeesContent");
+    return getDivByIdName("employees/employees", "settingsEmployeesEmployeesContent");
   }
 
   /**
@@ -82,7 +82,7 @@ public class CompanyAjaxController extends BaseAjaxController {
   */
   @GetMapping("/employees/roles")
   private String loadSettingsRoles() {
-    return getDivByClassName("employees/roles", "settingsEmployyesRolesContent");
+    return getDivByIdName("employees/roles", "settingsEmployyesRolesContent");
   }
     
   /**
@@ -92,7 +92,7 @@ public class CompanyAjaxController extends BaseAjaxController {
   */
   @GetMapping("/employees/wages")
   private String loadSettingsWages() {
-    return getDivByClassName("employees/wages", "settingsEmployeesWagesContent");
+    return getDivByIdName("employees/wages", "settingsEmployeesWagesContent");
   }
 
   /**
@@ -102,7 +102,7 @@ public class CompanyAjaxController extends BaseAjaxController {
   */
   @GetMapping("/employees/owner")
   private String loadSettingsOwner() {
-    return getDivByClassName("employees/owner", "settingsEmployeesOwnerContent");
+    return getDivByIdName("employees/owner", "settingsEmployeesOwnerContent");
   }
 
   /**
@@ -112,11 +112,11 @@ public class CompanyAjaxController extends BaseAjaxController {
   */
   @GetMapping("/safety")
   private String loadSettingsSafetyAll() {
-    return getDivByClassName("safety/all", "settingsSafetyAllContent");
+    return getDivByIdName("safety/all", "settingsSafetyAllContent");
   }
 
   private String loadSettingsSafetyCustom() {
-    return getDivByClassName("safety/custom", "settingsSafetyCustomContent");
+    return getDivByIdName("safety/custom", "settingsSafetyCustomContent");
   }
 
   /**
@@ -126,6 +126,6 @@ public class CompanyAjaxController extends BaseAjaxController {
   */
   @GetMapping("/subscription")
   private String loadSubscription() {
-    return getDivByClassName("subscription", "settingsSubscriptionContent");
+    return getDivByIdName("subscription", "settingsSubscriptionContent");
   }
 }

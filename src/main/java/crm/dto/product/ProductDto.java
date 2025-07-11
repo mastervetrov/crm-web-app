@@ -1,7 +1,6 @@
 package crm.dto.product;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import crm.service.product.ProductSvc;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +11,7 @@ import lombok.Data;
  * Used for return to the controllers.
  *
  * @see crm.model.product.Product
- * @see ProductSvc
+ * @see crm.service.product.ProductService
  * @see crm.controller.thymeleaf.html.store.remainder.RemainderController
  * @see crm.controller.thymeleaf.ajax.store.remainder.RemainderAjaxController
  */

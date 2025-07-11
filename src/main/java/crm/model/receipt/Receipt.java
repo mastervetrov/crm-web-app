@@ -1,11 +1,15 @@
 package crm.model.receipt;
 
+import crm.request.receipt.ReceiptRequest;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -13,12 +17,14 @@ import java.time.LocalDateTime;
  * Entity receipt.
  * Contains receipt data.
  *
- * @see crm.service.receipt.ReceiptSvc
+ * @see crm.service.receipt.Receiptservice
  * @see crm.repository.ReceiptRepository
  * @see crm.mapper.receipt.ReceiptMapper
- * @see crm.request.receipt.ReceiptUpsertRequest
+ * @see ReceiptRequest
  * @see crm.dto.receipt.ReceiptDto
  */
+@Getter
+@Setter
 @Entity
 @Table(name = "receipt")
 public class Receipt {

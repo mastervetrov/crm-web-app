@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
  * @see ProductMapper
  * @see ProductDto
  * @see crm.model.product.Product
- * @see crm.service.product.ProductSvc
+ * @see crm.service.product.Productservice
  */
 @Component
 @AllArgsConstructor

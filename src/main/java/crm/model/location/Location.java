@@ -1,22 +1,26 @@
 package crm.model.location;
 
-import crm.model.contractor.Contractor;
+import crm.request.location.LocationRequest;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Entity location.
  * Contains location data.
  *
  * @see crm.dto.location.LocationDto
- * @see crm.request.location.LocationUpsertRequest
- * @see crm.service.location.LocationSvc
+ * @see LocationRequest
+ * @see crm.service.location.LocationService
  * @see crm.repository.LocationRepository
  */
+@Getter
+@Setter
 @Entity
 @Table(name = "location")
 public class Location {

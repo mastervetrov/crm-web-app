@@ -1,5 +1,6 @@
 package crm.model.product;
 
+import crm.request.product.ProductRequest;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,10 +18,10 @@ import org.hibernate.annotations.UpdateTimestamp;
  * Entity product.
  * Contains product data.
  *
- * @see crm.service.product.ProductSvc
+ * @see crm.service.product.Productservice
  * @see crm.repository.product.ProductRepository
  * @see crm.mapper.product.ProductMapper
- * @see crm.request.product.ProductUpsertRequest
+ * @see ProductRequest
  * @see crm.dto.product.ProductDto
  */
 @Entity
